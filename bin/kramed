@@ -4,10 +4,14 @@
  * Marked CLI
  * Copyright (c) 2011-2013, Christopher Jeffrey (MIT License)
  */
+ /**
+ * Kramed CLI
+ * Copyright (c) 2014, Aaron O'Mullan (MIT License)
+ */
 
 var fs = require('fs')
   , util = require('util')
-  , marked = require('../');
+  , kramed = require('../');
 
 /**
  * Man Page
@@ -24,7 +28,7 @@ function help() {
   };
 
   spawn('man',
-    [__dirname + '/../man/marked.1'],
+    [__dirname + '/../man/kramed.1'],
     options);
 }
 
@@ -92,15 +96,15 @@ function main(argv, callback) {
       default:
         if (arg.indexOf('--') === 0) {
           opt = camelize(arg.replace(/^--(no-)?/, ''));
-          if (!marked.defaults.hasOwnProperty(opt)) {
+          if (!kramed.defaults.hasOwnProperty(opt)) {
             continue;
           }
           if (arg.indexOf('--no-') === 0) {
-            options[opt] = typeof marked.defaults[opt] !== 'boolean'
+            options[opt] = typeof kramed.defaults[opt] !== 'boolean'
               ? null
               : false;
           } else {
-            options[opt] = typeof marked.defaults[opt] !== 'boolean'
+            options[opt] = typeof kramed.defaults[opt] !== 'boolean'
               ? argv.shift()
               : true;
           }
@@ -125,8 +129,8 @@ function main(argv, callback) {
     if (err) return callback(err);
 
     data = tokens
-      ? JSON.stringify(marked.lexer(data, options), null, 2)
-      : marked(data, options);
+      ? JSON.stringify(kramed.lexer(data, options), null, 2)
+      : kramed(data, options);
 
     if (!output) {
       process.stdout.write(data + '\n');
@@ -177,7 +181,7 @@ function camelize(text) {
  */
 
 if (!module.parent) {
-  process.title = 'marked';
+  process.title = 'kramed';
   main(process.argv.slice(), function(err, code) {
     if (err) throw err;
     return process.exit(code || 0);

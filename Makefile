@@ -1,10 +1,10 @@
 all:
-	@cp lib/marked.js marked.js
-	@uglifyjs --comments '/\*[^\0]+?Copyright[^\0]+?\*/' -o marked.min.js lib/marked.js
+	@cp lib/kramed.js kramed.js
+	@uglifyjs --comments '/\*[^\0]+?Copyright[^\0]+?\*/' -o kramed.min.js lib/kramed.js
 
 clean:
-	@rm marked.js
-	@rm marked.min.js
+	@rm kramed.js
+	@rm kramed.min.js
 
 bench:
 	@node test --bench

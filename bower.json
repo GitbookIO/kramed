@@ -1,17 +1,21 @@
 {
-  "name": "marked",
+  "name": "kramed",
   "version": "0.3.2",
-  "homepage": "https://github.com/chjj/marked",
+  "homepage": "https://github.com/GitbookIO/kramed",
   "authors": [
+    "Aaron O'Mullan <aaron.omullan@gmail.com>",
     "Christopher Jeffrey <chjjeffrey@gmail.com>"
   ],
-  "description": "A markdown parser built for speed",
+  "description": "A markdown (kramdown compatible) parser and compiler. Built for speed.",
   "keywords": [
     "markdown",
     "markup",
-    "html"
+    "html",
+    "kramdown",
+    "kramed",
+    "parser"
   ],
-  "main": "lib/marked.js",
+  "main": "lib/kramed.js",
   "license": "MIT",
   "ignore": [
     "**/.*",

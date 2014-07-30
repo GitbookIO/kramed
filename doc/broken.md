@@ -8,7 +8,7 @@ thorough. There are a lot more of these little differences I have documented
 elsewhere. I know I will find them lingering on my disk one day, but until
 then, I'll continue to add whatever strange nonsensical things I find.
 
-Some of these examples may only mention a particular engine compared to marked.
+Some of these examples may only mention a particular engine compared to kramed.
 However, the examples with markdown.pl could easily be swapped out for
 discount, upskirt, or markdown.js, and you would very easily see even more
 inconsistencies.
@@ -41,7 +41,7 @@ $ markdown.pl
 
 
 ```
-$ marked
+$ kramed
   * item1
 
     * item2
@@ -77,7 +77,7 @@ $ markdown.pl
 ```
 
 ```
-$ marked
+$ kramed
 * hello
   > world
 ^D
@@ -164,7 +164,7 @@ Misnested tags.
 
 
 ```
-$ marked
+$ kramed
   * item1
 
     * item2
@@ -203,7 +203,7 @@ More misnested tags.
 
 
 ```
-$ marked
+$ kramed
 * hello
   > world
 ^D
@@ -247,7 +247,7 @@ $ sundown # upskirt
 ```
 
 ``` bash
-$ marked
+$ kramed
 * hello
   > world
 ^D
@@ -274,7 +274,7 @@ var a = 1;</li>
 ```
 
 ``` bash
-$ marked
+$ kramed
 * hello
       var a = 1;
 * world
@@ -301,7 +301,7 @@ $ markdown.js
 ```
 
 ``` bash
-$ marked
+$ kramed
 <div>hello</div>
 
 <span>hello</span>
@@ -325,7 +325,7 @@ $ markdown.js
 ```
 
 ``` bash
-$ marked
+$ kramed
 [![an image](/image)](/link)
 ^D
 <p><a href="/link"><img src="/image" alt="an image"></a>
@@ -348,7 +348,7 @@ $ markdown.js
 ```
 
 ``` bash
-$ marked
+$ kramed
 > a
 
 > b
@@ -398,7 +398,7 @@ you</p>
 ```
 
 ``` bash
-$ marked
+$ kramed
 * hello
   * world
     how
