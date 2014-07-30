@@ -365,6 +365,11 @@ cd kramed/
 node test
 ```
 
+### TODO
+  - [ ] Refactor code to have greater modularity
+  - [ ] Strive for kramdown compatibility (it's the new standard)
+  - [ ] Improve, improve, improve ...
+
 ### Contribution and License Agreement
 
 If you contribute code to this project, you are implicitly allowing your code
