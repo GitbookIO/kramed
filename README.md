@@ -11,6 +11,10 @@
 npm install kramed --save
 ```
 
+### Why fork `marked` ?
+
+`marked` hasn't been evolving as much as it could be lately and due to our needs with [GitBook](https://github.com/GitbookIO/gitbook), we need features such as robust `mathjax` support and want to strive closer to the rising `kramdown` standard.
+
 ## Usage
 
 Minimal usage:
