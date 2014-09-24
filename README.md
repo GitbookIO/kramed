@@ -4,6 +4,7 @@
 > for speed.
 
 [![NPM version](https://badge.fury.io/js/kramed.png)][badge]
+[![Build Status](https://travis-ci.org/GitbookIO/kramed.svg?branch=master)](https://travis-ci.org/GitbookIO/kramed)
 
 ## Install
 
