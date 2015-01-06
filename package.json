@@ -2,7 +2,7 @@
   "name": "kramed",
   "description": "A markdown (kramdown compatible) parser and compiler. Built for speed.",
   "author": "Aaron O'Mullan",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "main": "./lib/kramed.js",
   "bin": "./bin/kramed",
   "man": "./man/kramed.1",
