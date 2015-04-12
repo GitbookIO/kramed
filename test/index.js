@@ -12,7 +12,8 @@
 
 var fs = require('fs')
   , path = require('path')
-  , kramed = require('../');
+  , kramed = require('../')
+  , merge = require('../lib/utils').merge;
 
 /**
  * Load Tests
@@ -61,7 +62,13 @@ function runTests(engine, options) {
     engine = null;
   }
 
-  var engine = engine || kramed
+  var originalOpts = merge({}, kramed.defaults, (options && options.kramed) || {});
+  var engineOpts;
+  var defaultEngine = function(src) {
+    return kramed(src, engineOpts);
+  };
+
+  var engine = engine || defaultEngine
     , options = options || {}
     , files = options.files || load()
     , complete = 0
@@ -78,36 +85,27 @@ function runTests(engine, options) {
     , j
     , l;
 
-  if (options.kramed) {
-    kramed.setOptions(options.kramed);
-  }
-
 main:
   for (; i < len; i++) {
     filename = keys[i];
     file = files[filename];
 
-    if (kramed._original) {
-      kramed.defaults = kramed._original;
-      delete kramed._original;
-    }
+    // Reset options
+    engineOpts = Object.create(originalOpts);
 
+    // Extract options from filename
     flags = filename.split('.').slice(1, -1);
     if (flags.length) {
-      kramed._original = kramed.defaults;
-      kramed.defaults = {};
-      Object.keys(kramed._original).forEach(function(key) {
-        kramed.defaults[key] = kramed._original[key];
-      });
       flags.forEach(function(key) {
         var val = true;
         if (key.indexOf('no') === 0) {
           key = key.substring(2);
           val = false;
         }
-        if (kramed.defaults.hasOwnProperty(key)) {
-          kramed.defaults[key] = val;
+        if (key in engineOpts) {
+          engineOpts[key] = val;
         }
+        console.log();
       });
     }
 
