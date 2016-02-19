@@ -5,3 +5,5 @@
 ## no ascii 中文
 
 ### special characters � '`"|,.\/
+
+### !leading punctuation
