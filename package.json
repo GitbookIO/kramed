@@ -9,14 +9,33 @@
   "preferGlobal": true,
   "repository": "git://github.com/GitbookIO/kramed.git",
   "homepage": "https://github.com/GitbookIO/kramed",
-  "bugs": { "url": "http://github.com/GitbookIO/kramed/issues" },
+  "bugs": {
+    "url": "http://github.com/GitbookIO/kramed/issues"
+  },
   "license": "MIT",
-  "keywords": ["markdown", "markup", "html", "kramdown", "kramed", "parser"],
-  "tags": ["markdown", "markup", "html", "kramdown", "kramed", "parser"],
+  "keywords": [
+    "markdown",
+    "markup",
+    "html",
+    "kramdown",
+    "kramed",
+    "parser"
+  ],
+  "tags": [
+    "markdown",
+    "markup",
+    "html",
+    "kramdown",
+    "kramed",
+    "parser"
+  ],
   "devDependencies": {
     "markdown": "*",
     "showdown": "*",
     "robotskirt": "*"
   },
-  "scripts": { "test": "node test", "bench": "node test --bench" }
+  "scripts": {
+    "test": "node test",
+    "bench": "node test --bench"
+  }
 }
